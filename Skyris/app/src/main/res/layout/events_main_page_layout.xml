@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SkyrisFragmentActivity"
+    android:background="#022e4e">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/label_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SKYRIS"
+                android:id="@+id/textView"
+                android:textColor="@android:color/white"
+                android:textSize="60dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/option_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/label_text"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/main_holder"
+
+                >
+
+                <include layout="@layout/main_screen_tile"
+                    android:id="@+id/event_button"
+                    android:layout_width="fill_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="fill_parent"/>
+                <include layout="@layout/main_screen_tile"
+                    android:id="@+id/archive_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dp"
+                    />
+                <include layout="@layout/main_screen_tile"
+                    android:id="@+id/profile_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"/>
+
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+    </RelativeLayout>
+</LinearLayout>
